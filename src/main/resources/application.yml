@@ -1,0 +1,28 @@
+
+spring:
+  application:
+    name: employee
+  main:
+    lazy-initialization: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee?useSSL=true&serverTimezone=UTC&&createDatabaseIfNotExist=true
+    username: root
+    password: mysql@237
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    hikari:
+#      minimum-idle: 5
+#      maximum-pool-size: 20
+#      connection-timeout: 30000
+#      idle-timeout: 30000
+#      leak-detection-threshold: 15000
+#      max-lifetime: 2000000
+  jpa:
+    generate-ddl: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
+
