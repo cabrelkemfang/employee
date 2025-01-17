@@ -1,7 +1,7 @@
 package com.example.employee.stepDefinition;
 
-import com.example.employee.domain.dto.EmployeeRequest;
-import com.example.employee.domain.dto.EmployeeResponse;
+import com.example.employee.domain.dto.Employee;
+import com.example.employee.api.dto.EmployeeResponse;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,10 +17,10 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EmployeeStepDefinitionTest {
+public class EmployeeEntityStepDefinitionTest {
 
     private Response response;
-    private EmployeeRequest employeeRequest;
+    private Employee employeeRequest;
     private String employeeId;
 
     @LocalServerPort
@@ -31,7 +31,7 @@ public class EmployeeStepDefinitionTest {
         RestAssured.port = port;
     }
     @Given("The user is on the employee creation page and wants to create an employee with the following details:")
-    public void theUserIsOnTheEmployeeCreationPageAndWantsToCreateAnEmployeeWithTheFollowingDetails(EmployeeRequest employee) {
+    public void theUserIsOnTheEmployeeCreationPageAndWantsToCreateAnEmployeeWithTheFollowingDetails(Employee employee) {
         employeeRequest = employee;
     }
 

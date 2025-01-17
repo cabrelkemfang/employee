@@ -1,5 +1,7 @@
-package com.example.employee.domain.dto;
+package com.example.employee.api.dto;
 
+import com.example.employee.domain.dto.Bank;
+import com.example.employee.domain.dto.Department;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

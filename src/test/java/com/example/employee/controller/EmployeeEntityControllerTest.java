@@ -2,8 +2,8 @@ package com.example.employee.controller;
 
 import com.example.employee.EmployeeApplication;
 import com.example.employee.domain.dto.Department;
-import com.example.employee.domain.dto.EmployeeRequest;
-import com.example.employee.domain.dto.EmployeeResponse;
+import com.example.employee.domain.dto.Employee;
+import com.example.employee.api.dto.EmployeeResponse;
 import io.restassured.RestAssured;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
@@ -20,11 +20,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {EmployeeApplication.class})
 @ActiveProfiles("test")
-public class EmployeeControllerTest {
+public class EmployeeEntityControllerTest {
     @LocalServerPort
     private Integer port;
 
-    private EmployeeRequest employeeRequest;
+    private Employee employeeRequest;
     private Response response;
 
     @BeforeEach
@@ -139,7 +139,7 @@ public class EmployeeControllerTest {
     }
 
     private void initializeEmployeeRequest() {
-        employeeRequest = EmployeeRequest.builder()
+        employeeRequest = Employee.builder()
                 .department(Department.ADMINISTRATION)
                 .email("test@gmail.com")
                 .lastName("last name")

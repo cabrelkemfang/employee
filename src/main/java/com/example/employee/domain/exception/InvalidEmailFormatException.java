@@ -1,10 +1,10 @@
 package com.example.employee.domain.exception;
 
-import com.example.employee.domain.dto.EmployeeRequest;
+import com.example.employee.domain.dto.Employee;
 
 public class InvalidEmailFormatException extends RuntimeException {
 
-    public InvalidEmailFormatException(EmployeeRequest employeeRequest) {
+    public InvalidEmailFormatException(Employee employeeRequest) {
         super("Invalid email format: " + employeeRequest.getEmail());
     }
 }

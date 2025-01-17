@@ -1,17 +1,12 @@
-package com.example.employee.domain.port;
+package com.example.employee.domain.service.repository;
 
 import com.example.employee.domain.dto.Employee;
 import com.example.employee.domain.dto.PaginatedResponse;
 
-public interface EmployeeRepositoryPort {
-
+public interface EmployeeService {
     PaginatedResponse<Employee> getEmployees(int page, int size);
-
-    void createEmployee(Employee employee);
 
     Employee findEmployeeById(Long employeeId);
 
-    boolean isUserPresent(String email);
-
-    void deleteEmployeeById(Long employeeId);
+    void createEmployee(Employee employee);
 }

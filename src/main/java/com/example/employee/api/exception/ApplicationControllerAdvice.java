@@ -1,4 +1,4 @@
-package com.example.employee.api;
+package com.example.employee.api.exception;
 
 import com.example.employee.domain.exception.EmployeeAlreadyExistsException;
 import com.example.employee.domain.exception.EmployeeNotFoundException;

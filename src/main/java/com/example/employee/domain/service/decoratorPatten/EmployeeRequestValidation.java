@@ -1,7 +1,6 @@
-package com.example.employee.domain.service;
+package com.example.employee.domain.service.decoratorPatten;
 
-import com.example.employee.domain.dto.EmployeeRequest;
-import com.example.employee.domain.exception.EmployeeAlreadyExistsException;
+import com.example.employee.domain.dto.Employee;
 import com.example.employee.domain.exception.InvalidEmailFormatException;
 import com.example.employee.domain.exception.InvalidPhoneNumberFormatException;
 import com.example.employee.domain.port.EmployeeRepositoryPort;
@@ -9,11 +8,12 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.regex.Pattern;
 
+
 @RequiredArgsConstructor
 public class EmployeeRequestValidation {
     private final EmployeeRepositoryPort employeeRepositoryPort;
 
-    public void validate(EmployeeRequest employeeRequest) {
+    public void validate(Employee employeeRequest) {
         // validate if  user id already present
 //        var isPresent = isUserPresent(employeeRequest.getEmail());
 //
