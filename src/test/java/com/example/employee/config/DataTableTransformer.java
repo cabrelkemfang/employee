@@ -25,7 +25,6 @@ public class DataTableTransformer {
         return EmployeeResponse.builder()
                 .employeeId(Long.valueOf(row.get("Employee Id")))
                 .email(row.get("Email"))
-                .phoneNumber(row.get("Phone Number"))
                 .department(Department.fromString(row.get("Department")))
                 .firstName(row.get("First Name"))
                 .lastName(row.get("Last Name"))
